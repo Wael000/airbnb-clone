@@ -17,9 +17,11 @@ const Register = () => {
         password
       })
       console.log(res.data)
+      alert('User registered')
     }
     catch (err) {
       console.log(err)
+      alert('Error registering user')
     }
   }
 
