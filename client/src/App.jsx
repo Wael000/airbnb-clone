@@ -9,6 +9,8 @@ import Account from './components/Account'
 import Profile from './components/Profile'
 import Bookings from './components/Bookings'
 import Accomodations from './components/Accomodations'
+import AccomodationsList from './components/AccomodationsList'
+import AccomdationsAdd from './components/AccomodationsAdd'
 
 function App() {
 
@@ -22,7 +24,10 @@ function App() {
           <Route path="account" element={<Account />} >
             <Route index element={<Profile />} />
             <Route path="bookings" element={<Bookings />} />
-            <Route path="properties" element={<Accomodations />} />
+            <Route path="properties" element={<Accomodations />} >
+              <Route path="list" element={<AccomodationsList />} />
+              <Route path="edit" element={<AccomdationsAdd />} />
+            </Route>
           </Route>
         </Route>
       </Routes>

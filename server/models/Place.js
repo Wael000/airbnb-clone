@@ -10,6 +10,10 @@ const placeSchema = new mongoose.Schema({
     checkIn: String,
     checkOut: String,
     maxGuests: Number,
+    user : {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
 });
 
 const Place = mongoose.model('Place', placeSchema);
